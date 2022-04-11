@@ -1,0 +1,24 @@
+.add-contact-view {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  padding: 20px;
+  margin: 4px;
+}
+input {
+  width: 200px;
+  border: 2px solid;
+}
+label {
+  color: blue;
+  margin-top: 10px;
+}
+.like-cold-field {
+  margin-top: -17px;
+}
+.addBtn {
+  margin-top: 20px;
+  background-color: rgb(153, 163, 240);
+  text-align: center;
+  padding: 3px;
+}

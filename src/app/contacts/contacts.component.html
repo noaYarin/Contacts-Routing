@@ -1,0 +1,16 @@
+<table class="table-auto">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Date Of Birth</th>
+      <th>Like Cold</th>
+    </tr>
+  </thead>
+  <tbody>
+    <app-contact
+      *ngFor="let contact of contacts"
+      [contact]="contact"
+    ></app-contact>
+  </tbody>
+</table>
