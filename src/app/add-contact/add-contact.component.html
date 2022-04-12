@@ -1,11 +1,23 @@
 <div class="add-contact-view">
+  <h1>Add Contact</h1>
   <label for="name">Name :</label>
-  <input name="name" type="text" />
+  <input name="name" type="text" [(ngModel)]="name" />
   <label for="age">Age : </label>
-  <input name="age" type="number" />
+  <input name="age" type="number" [(ngModel)]="age" />
   <label for="birthday">Birthday : </label>
-  <input type="date" />
+  <input type="date" name="birthday" [(ngModel)]="dateOfBirth" />
   <label for="isLikeCold">is Like Cold :</label>
-  <input name="isLikeCold" type="radio" class="like-cold-field" />
-  <input type="button" class="addBtn" value="New Contact" />
+  <input
+    name="isLikeCold"
+    type="radio"
+    (change)="toggleRadioButton()"
+    class="like-cold-field"
+    [(ngModel)]="isLikeCold"
+  />
+  <input
+    type="button"
+    class="addBtn"
+    value="New Contact"
+    (click)="addContact()"
+  />
 </div>

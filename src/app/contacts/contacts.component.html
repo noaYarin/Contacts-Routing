@@ -1,16 +1,20 @@
-<table class="table-auto">
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Date Of Birth</th>
-      <th>Like Cold</th>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Date Of Birth</th>
+      <th scope="col">Is Like Cold</th>
     </tr>
   </thead>
   <tbody>
-    <app-contact
-      *ngFor="let contact of contacts"
-      [contact]="contact"
-    ></app-contact>
+    <tr *ngFor="let contact of contacts; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ contact?.name }}</td>
+      <td>{{ contact?.age }}</td>
+      <td>{{ contact?.dateOfBirth | date: "shortDate" }}</td>
+      <td>{{ contact?.isLikeCold }}</td>
+    </tr>
   </tbody>
 </table>

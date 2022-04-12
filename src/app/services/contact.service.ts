@@ -4,20 +4,7 @@ import { Contact } from '../classes/contact';
   providedIn: 'root',
 })
 export class ContactService {
-  private contacts: Contact[] = [
-    {
-      name: 'John',
-      age: 30,
-      dateOfBirth: new Date(1980, 1, 1),
-      isLikeCold: true,
-    },
-    {
-      name: 'John',
-      age: 30,
-      dateOfBirth: new Date(1980, 1, 1),
-      isLikeCold: true,
-    },
-  ];
+  private contacts: Contact[] = [];
   constructor() {}
   addContact(contact: Contact): void {
     this.contacts.push(contact);

@@ -1,6 +1,7 @@
 .add-contact-view {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-flow: column;
   padding: 20px;
   margin: 4px;
@@ -15,6 +16,7 @@ label {
 }
 .like-cold-field {
   margin-top: -17px;
+  margin-left: 100px;
 }
 .addBtn {
   margin-top: 20px;
