@@ -5,5 +5,11 @@
 table,
 th,
 td {
+  font-size: 18px;
   border: 1px solid;
+}
+.icons,
+.nameWithIcon {
+  display: flex;
+  justify-content: space-evenly;
 }

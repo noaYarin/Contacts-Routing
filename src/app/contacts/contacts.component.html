@@ -14,8 +14,10 @@
     <tr *ngFor="let contact of contacts; index as i">
       <th scope="row">{{ i + 1 }}</th>
       <td>
-        {{ contact?.name }}
-        <img [src]="contact.isLikeCold | isLikeCold" width="20px" />
+        <div class="nameWithIcon">
+          {{ contact?.name }}
+          <img [src]="contact.isLikeCold | isLikeCold" width="26px" />
+        </div>
       </td>
       <td>{{ contact?.age }}</td>
       <td>{{ contact?.dateOfBirth | date: "shortDate" }}</td>
@@ -23,13 +25,21 @@
         {{ contact?.isLikeCold }}
       </td>
       <td>
-        <a [routerLink]="['/updateContact', contact.id]">
+        <div class="icons">
+          <a [routerLink]="['/updateContact', contact.id]">
+            <img
+              src="../../assets/images/update.png"
+              alt="paper image"
+              width="26px"
+            />
+          </a>
           <img
-            src="../../assets/images/update.png"
-            alt="paper image"
-            width="20px"
+            src="../../assets/images/trash-can.png"
+            alt=" Trash can image"
+            width="28px"
+            (click)="deleteContact(contact.id)"
           />
-        </a>
+        </div>
       </td>
     </tr>
   </tbody>

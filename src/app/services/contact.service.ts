@@ -24,4 +24,8 @@ export class ContactService {
     );
     this.contacts[index] = contact;
   }
+  deleteContactById(contactId: string) {
+    let idx = this.contacts.findIndex((contact) => contact.id === contactId);
+    this.contacts.splice(idx, 1);
+  }
 }

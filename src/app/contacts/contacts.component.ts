@@ -30,4 +30,8 @@ export class ContactsComponent implements OnInit {
       })
     );
   }
+
+  deleteContact(contactId: string) {
+    this.ContactService.deleteContactById(contactId);
+  }
 }

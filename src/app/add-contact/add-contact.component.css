@@ -11,12 +11,14 @@ input {
   border: 2px solid;
 }
 label {
+  font-size: 18px;
   color: blue;
-  margin-top: 10px;
+  margin-top: 14px;
+  margin-bottom: 10px;
 }
 .like-cold-field {
-  margin-top: -17px;
-  margin-left: 100px;
+  margin-top: -25px;
+  margin-left: 120px;
 }
 .addBtn {
   margin-top: 20px;
