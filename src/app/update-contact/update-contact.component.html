@@ -1,10 +1,29 @@
 <app-navbar></app-navbar>
 <div class="wrap">
-  <div class="update-contact">
-    <p>{{ contact?.id }}</p>
-    <p>{{ contact?.name }}</p>
-    <p>{{ contact?.age }}</p>
-    <p>{{ contact?.dateOfBirth | date }}</p>
-    <p>{{ contact?.isLikeCold }}</p>
-  </div>
+  <h1>Update Contact</h1>
+  <label for="name">Name :</label>
+  <input name="name" type="text" [value]="contact?.name" #name />
+  <label for="age">Age : </label>
+  <input name="age" type="number" [value]="contact?.age" #age />
+  <label for="birthday">Birthday : </label>
+  <input
+    type="date"
+    name="birthday"
+    [value]="contact?.dateOfBirth"
+    #dateOfBirth
+  />
+  <label for="isLikeCold">is Like Cold :</label>
+  <input
+    name="isLikeCold"
+    type="checkbox"
+    [checked]="contact?.isLikeCold"
+    #radio
+  />
+  <input
+    type="button"
+    value="Save"
+    class="editBtn"
+    (click)="saveContact(name, age, dateOfBirth, radio)"
+    (click)="gotoContacts()"
+  />
 </div>

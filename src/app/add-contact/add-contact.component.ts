@@ -25,8 +25,6 @@ export class AddContactComponent implements OnInit {
       this.dateOfBirth,
       this.isLikeCold
     );
-    console.log(contactObject);
-
     this.ContactService.addContact(contactObject);
     this.clearInputs();
   }

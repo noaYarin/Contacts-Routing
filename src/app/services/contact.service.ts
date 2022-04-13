@@ -18,4 +18,10 @@ export class ContactService {
   getContactById(contactId: string) {
     return this.contacts.find((contact) => contact.id === contactId);
   }
+  saveContact(contact: Contact) {
+    const index = this.contacts.findIndex(
+      (contact) => contact.id === contact.id
+    );
+    this.contacts[index] = contact;
+  }
 }

@@ -2,11 +2,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 550px;
+  flex-flow: column;
+  height: 450px;
+  padding: 20px;
+  margin: 4px;
 }
-.update-contact {
+input {
   width: 200px;
+  border: 2px solid;
+}
+label {
+  color: purple;
+  margin-top: 10px;
+}
+.editBtn {
+  margin-top: 20px;
+  background-color: blue;
+  text-align: center;
+  width: 50px;
   padding: 3px;
-  color: white;
-  background-color: rgb(158, 157, 159);
 }
