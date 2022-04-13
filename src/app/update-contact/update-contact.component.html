@@ -1,1 +1,10 @@
-<p>update-contact works!</p>
+<app-navbar></app-navbar>
+<div class="wrap">
+  <div class="update-contact">
+    <p>{{ contact?.id }}</p>
+    <p>{{ contact?.name }}</p>
+    <p>{{ contact?.age }}</p>
+    <p>{{ contact?.dateOfBirth | date }}</p>
+    <p>{{ contact?.isLikeCold }}</p>
+  </div>
+</div>

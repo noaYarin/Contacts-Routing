@@ -9,6 +9,9 @@ import { AddContactComponent } from './add-contact/add-contact.component';
 import { UpdateContactComponent } from './update-contact/update-contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { IsLikeColdPipe } from './pipes/is-like-cold.pipe';
+import { ContactModule } from './contact.module';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +20,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ContactsComponent,
     AddContactComponent,
     UpdateContactComponent,
+    IsLikeColdPipe,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
     NgbModule,
+    ContactModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Contact } from '../classes/contact';
 import { ContactService } from '../services/contact.service';
+import { v4 as uuidv4 } from 'uuid';
 @Component({
   selector: 'app-add-contact',
   templateUrl: './add-contact.component.html',
@@ -16,12 +17,15 @@ export class AddContactComponent implements OnInit {
     this.isLikeCold = !this.isLikeCold;
   }
   addContact(): void {
+    let contactId = this.generateUUID();
     let contactObject = new Contact(
+      contactId,
       this.name,
       this.age,
       this.dateOfBirth,
       this.isLikeCold
     );
+    console.log(contactObject);
 
     this.ContactService.addContact(contactObject);
     this.clearInputs();
@@ -32,6 +36,10 @@ export class AddContactComponent implements OnInit {
     this.age = 0;
     this.dateOfBirth = new Date();
     this.isLikeCold = false;
+  }
+  generateUUID() {
+    let randomUUID = uuidv4();
+    return randomUUID;
   }
   ngOnInit(): void {}
 }

@@ -1,7 +1,8 @@
+<app-navbar></app-navbar>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">.NO</th>
       <th scope="col">Name</th>
       <th scope="col">Age</th>
       <th scope="col">Date Of Birth</th>
@@ -11,10 +12,24 @@
   <tbody>
     <tr *ngFor="let contact of contacts; index as i">
       <th scope="row">{{ i + 1 }}</th>
-      <td>{{ contact?.name }}</td>
+      <td>
+        {{ contact?.name }}
+        <img [src]="contact.isLikeCold | isLikeCold" width="20px" />
+      </td>
       <td>{{ contact?.age }}</td>
       <td>{{ contact?.dateOfBirth | date: "shortDate" }}</td>
-      <td>{{ contact?.isLikeCold }}</td>
+      <td>
+        {{ contact?.isLikeCold }}
+      </td>
+      <td>
+        <a [routerLink]="['/updateContact', contact.id]">
+          <img
+            src="../../assets/images/update.png"
+            alt="paper image"
+            width="20px"
+          />
+        </a>
+      </td>
     </tr>
   </tbody>
 </table>

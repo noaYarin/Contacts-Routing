@@ -1,0 +1,32 @@
+.wrap-nav {
+  background-color: blueviolet;
+  padding: 10px;
+}
+nav {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+li {
+  width: 200px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: rgb(224, 200, 247);
+  margin: 10px;
+  padding: 5px;
+  display: block;
+  box-shadow: 2px 5px 10px rgb(159, 154, 154);
+}
+
+.contacts-link {
+  padding: 10px;
+  color: white;
+  font-size: 25px;
+}

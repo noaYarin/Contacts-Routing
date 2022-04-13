@@ -1,10 +1,5 @@
 .home {
-  margin: 20px;
-  padding: 10px;
-}
-
-.contacts-link {
-  padding: 10px;
-  color: red;
-  font-size: 25px;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 50px;
 }

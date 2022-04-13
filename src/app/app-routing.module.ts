@@ -7,7 +7,6 @@ import { UpdateContactComponent } from './update-contact/update-contact.componen
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'contacts', component: ContactsComponent },
   { path: 'addContact', component: AddContactComponent },
   { path: 'updateContact', component: UpdateContactComponent },
   { path: '**', component: HomeComponent },

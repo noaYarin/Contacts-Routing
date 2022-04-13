@@ -1,0 +1,12 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 550px;
+}
+.update-contact {
+  width: 200px;
+  padding: 3px;
+  color: white;
+  background-color: rgb(158, 157, 159);
+}
