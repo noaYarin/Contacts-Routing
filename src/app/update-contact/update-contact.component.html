@@ -1,29 +1,31 @@
 <app-navbar></app-navbar>
 <div class="wrap">
   <h1>Update Contact</h1>
-  <label for="name">Name :</label>
-  <input name="name" type="text" [value]="contact?.name" #name />
+  <label>Name :</label>
+  <input type="text" [(ngModel)]="name" [ngModel]="contact?.name" />
   <label for="age">Age : </label>
-  <input name="age" type="number" [value]="contact?.age" #age />
+  <input name="age" type="number" [(ngModel)]="age" [ngModel]="contact?.age" />
   <label for="birthday">Birthday : </label>
   <input
     type="date"
     name="birthday"
-    [value]="contact?.dateOfBirth"
-    #dateOfBirth
+    [(ngModel)]="dateOfBirth"
+    [ngModel]="contact?.dateOfBirth"
   />
   <label for="isLikeCold">is Like Cold :</label>
   <input
     name="isLikeCold"
     type="checkbox"
-    [checked]="contact?.isLikeCold"
-    #radio
+    [(ngModel)]="isLikeCold"
+    [ngModel]="contact?.isLikeCold"
   />
   <input
     type="button"
     value="Save"
     class="editBtn"
-    (click)="saveContact(name, age, dateOfBirth, radio)"
+    (click)="saveContact()"
     (click)="gotoContacts()"
   />
 </div>
+<!--    [(ngModel)]="name"
+    (ngModelChange)="name = $event" -->

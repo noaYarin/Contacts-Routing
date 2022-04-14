@@ -11,6 +11,11 @@ import { ContactService } from '../services/contact.service';
 export class UpdateContactComponent implements OnInit {
   @Input() contact?: Contact;
   id?: string;
+  name = '';
+  age = 0;
+  dateOfBirth = new Date();
+  isLikeCold = false;
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -20,26 +25,24 @@ export class UpdateContactComponent implements OnInit {
   ngOnInit(): void {
     let contactId = this.route.snapshot.paramMap.get('id');
     this.contact = this.ContactService.getContactById(contactId ?? '');
+    console.log(this.contact);
   }
 
-  saveContact(
-    name: HTMLInputElement,
-    age: HTMLInputElement,
-    dateOfBirth: HTMLInputElement,
-    isLikeCold: HTMLInputElement
-  ): void {
+  saveContact(): void {
+    console.log(this.name);
+
     let contactObject = new Contact(
       this.contact?.id ?? '',
-      name.value,
-      parseInt(age.value),
-      new Date(dateOfBirth.value),
-      isLikeCold.checked
+      this.name,
+      this.age,
+      this.dateOfBirth,
+      this.isLikeCold
     );
     this.ContactService.saveContact(contactObject);
-    name.value = '';
-    age.value = '';
-    dateOfBirth.value = '';
-    isLikeCold.checked = false;
+    this.name = '';
+    this.age = 0;
+    this.dateOfBirth = new Date();
+    this.isLikeCold = false;
   }
 
   gotoContacts() {
