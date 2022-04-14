@@ -25,12 +25,9 @@ export class UpdateContactComponent implements OnInit {
   ngOnInit(): void {
     let contactId = this.route.snapshot.paramMap.get('id');
     this.contact = this.ContactService.getContactById(contactId ?? '');
-    console.log(this.contact);
   }
 
   saveContact(): void {
-    console.log(this.name);
-
     let contactObject = new Contact(
       this.contact?.id ?? '',
       this.name,
@@ -39,10 +36,6 @@ export class UpdateContactComponent implements OnInit {
       this.isLikeCold
     );
     this.ContactService.saveContact(contactObject);
-    this.name = '';
-    this.age = 0;
-    this.dateOfBirth = new Date();
-    this.isLikeCold = false;
   }
 
   gotoContacts() {
